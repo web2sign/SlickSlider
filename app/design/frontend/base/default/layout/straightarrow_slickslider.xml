@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Straightarrow_SlickSlider
+ *
+ * @category Straightarrow
+ * @package Straightarrow_SlickSlider
+ * @author Roy Vincent Niepes <rlniepes@straightarrow.com, web2sign@gmail.com>
+ * @copyright Copyright (c) 2015 Straightarrow, Ltd (http://www.straightarrow.com.ph)
+ * @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<layout version="0.1.0">
+  <default>
+    <reference name="head">
+      <action method="addItem">
+        <type>skin_js</type>
+        <name>sac_slider/slick/slick.min.js</name>
+      </action>
+      <action method="addItem">
+        <type>skin_css</type>
+        <name>sac_slider/slick/slick.min.css</name>
+      </action>
+      <action method="addItem">
+        <type>skin_css</type>
+        <name>sac_slider/slick/slick-theme.css</name>
+      </action>
+      <action method="addItem">
+        <type>skin_css</type>
+        <name>sac_slider/slick/custom.css</name>
+      </action>
+    </reference>
+
+    <reference name="header">
+      <block type="straightarrow_slickslider/slickslider"  name="straightarrow_slickslider_slider" as="slickSliderHeader" template="straightarrow/slickslider/slider.phtml" />
+    </reference>
+
+    <reference name="content">
+      
+    </reference>
+
+
+    <reference name="footer">
+      
+    </reference>
+
+  </default>
+  <sliderfrontend_index_index>
+
+  </sliderfrontend_index_index>
+</layout>

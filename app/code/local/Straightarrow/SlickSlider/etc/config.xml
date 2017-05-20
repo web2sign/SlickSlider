@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Straightarrow_SlickSlider
+ *
+ * @category Straightarrow
+ * @package Straightarrow_SlickSlider
+ * @author Roy Vincent Niepes <rlniepes@straightarrow.com, web2sign@gmail.com>
+ * @copyright Copyright (c) 2015 Straightarrow, Ltd (http://www.straightarrow.com.ph)
+ * @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+  <modules>
+    <Straightarrow_SlickSlider>
+    <version>1.0.0</version>
+    </Straightarrow_SlickSlider>
+  </modules>
+
+
+  <frontend>
+
+    <routers>
+      <sliderfrontend>
+        <use>standard</use>
+        <args>
+          <module>Straightarrow_SlickSlider</module>
+          <frontName>straightarrow_slickslider</frontName>
+        </args>
+      </sliderfrontend>
+    </routers>
+
+    <layout>
+      <updates>
+        <straightarrow_slickslider>
+          <file>straightarrow_slickslider.xml</file>
+        </straightarrow_slickslider>
+      </updates>
+    </layout>
+
+  </frontend>
+
+
+  <admin>
+    <routers>
+      <straightarrow_slickslider_admin>
+        <use>admin</use>
+        <args>
+          <module>Straightarrow_SlickSlider</module>
+          <frontName>straightarrow_slickslider</frontName>
+        </args>
+      </straightarrow_slickslider_admin>
+    </routers>
+  </admin>
+
+  <adminhtml>
+    <layout>
+      <updates>
+        <straightarrow_slickslider>
+          <file>straightarrow_slickslider.xml</file>
+        </straightarrow_slickslider>
+      </updates>
+    </layout>
+
+    <!-- <menu>
+      <straightarrow_menu translate="title" module="adminhtml">
+        <title>Straightarrow</title>
+        <sort_order>100</sort_order>
+        <children>
+          <sliders>
+            <title>Manage Slider</title>
+            <action>straightarrow_slickslider/adminhtml_sliders</action>
+          </sliders>
+          <banners>
+            <title>Manage Banner</title>
+            <action>straightarrow_slickslider/adminhtml_banners</action>
+          </banners>
+        </children>
+      </straightarrow_menu>
+    </menu> -->
+  </adminhtml>
+
+
+  <global>
+    <blocks>
+      <straightarrow_slickslider>
+        <class>Straightarrow_SlickSlider_Block</class>
+      </straightarrow_slickslider>
+    </blocks>
+
+    <helpers>
+        <slider>
+            <class>Straightarrow_SlickSlider_Helper</class>
+        </slider>
+    </helpers>
+
+    <models>
+      <slickslider>
+        <class>Straightarrow_SlickSlider_Model</class>
+        <resourceModel>slickslider_mysql4</resourceModel>
+      </slickslider>
+      <slickslider_mysql4>
+        <class>Straightarrow_SlickSlider_Model_Mysql4</class>
+        <entities>
+          <slickslider>
+            <table>straightarrow_slickslider_slider</table>
+          </slickslider>
+          
+          <banners>
+            <table>straightarrow_slickslider_items</table>
+          </banners>
+
+        </entities>
+      </slickslider_mysql4>
+    </models>
+    <!-- allow the plugin to read and write -->
+    <resources>
+      <!-- connection to write -->
+      <slickslider_write>
+        <connection>
+          <use>core_write</use>
+        </connection>
+      </slickslider_write>
+      <!-- connection to read -->
+      <slickslider_read>
+        <connection>
+          <use>core_read</use>
+        </connection>
+      </slickslider_read>
+    </resources>
+    <!-- -/- -->
+
+
+  </global>
+</config>

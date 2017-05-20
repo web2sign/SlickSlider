@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Straightarrow_SlickSlider
+ *
+ * @category Straightarrow
+ * @package Straightarrow_SlickSlider
+ * @author Roy Vincent Niepes <rlniepes@straightarrow.com, web2sign@gmail.com>
+ * @copyright Copyright (c) 2015 Straightarrow, Ltd (http://www.straightarrow.com.ph)
+ * @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Straightarrow_SlickSlider>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Straightarrow_SlickSlider>
+    </modules>
+</config>
